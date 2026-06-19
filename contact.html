@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Genex Logistics. Contact our Delhi corporate office or find regional warehousing hubs in Mumbai, Chennai, and Bengaluru.">
+  <title>Contact Us | Genex Logistics | Office Locations & Inquiries</title>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- --- HEADER NAVIGATION --- -->
+  <header class="scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Genex Logistics Logo" class="logo-img">
+      </a>
+      
+      <nav class="nav-links">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </div>
+        <div class="nav-item">
+          <a href="about.html" class="nav-link">About Us</a>
+        </div>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link dropdown-trigger">Services <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i></a>
+          <div class="nav-dropdown">
+            <a href="services.html#3pl">3PL & Contract Logistics</a>
+            <a href="services.html#warehousing">Shared Warehousing</a>
+            <a href="services.html#distribution">Road Express & LTL</a>
+            <a href="services.html#global">Global Air & Ocean Freight</a>
+            <a href="services.html#project">Project Logistics & ODC</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="industries.html" class="nav-link">Industries</a>
+        </div>
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link active">Contact Us</a>
+        </div>
+      </nav>
+      
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-calculator"></i> Get a Quote</a>
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- HERO SECTION CONTACT --- -->
+  <section class="section section-alt" style="padding-top: 160px; padding-bottom: 80px; background-image: radial-gradient(circle at top right, rgba(6, 182, 212, 0.15), transparent 50%);">
+    <div class="container">
+      <div class="section-header animated fade-in-up" style="margin-bottom: 0;">
+        <h2>Connect With Us</h2>
+        <p style="color: var(--text-muted); font-size: 1.25rem;">Reach out to our logistics planners to discuss your warehousing and transport needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- CONTACT FORM & DETAIL GRID --- -->
+  <section class="section">
+    <div class="container contact-grid">
+      <!-- Info Column -->
+      <div class="contact-info-block animated slide-in-left">
+        <h2 style="font-size: 2rem; margin-bottom: 16px; color: var(--primary);">Contact Channels</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 32px;">Choose a direct route to connect with our solution desk or drop our corporate team a message.</p>
+        
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contact-card-detail">
+            <h3>Corporate Office Address</h3>
+            <p>102, Vardhman Crown Mall, Sector-19, Dwarka, New Delhi - 110075, India</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-card-detail">
+            <h3>Sales & Support Email</h3>
+            <p>solutions@genexlogistics.in</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="contact-card-detail">
+            <h3>Direct Contact Numbers</h3>
+            <p>+91-11-28085421<br>+91-11-28085422</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Inquiry Card -->
+      <div class="contact-form-card animated scale-up">
+        <h2>Submit B2B RFP Inquiry</h2>
+        <p>Complete the fields below to trigger a custom feasibility proposal assessment.</p>
+        
+        <form id="contact-inquiry-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-name">Contact Person Name *</label>
+              <input type="text" id="form-name" placeholder="John Doe" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email">Work Email ID *</label>
+              <input type="email" id="form-email" placeholder="john@company.com" class="form-control" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-phone">Contact Mobile</label>
+              <input type="tel" id="form-phone" placeholder="+91 99999 99999" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="form-company">Company Corporate Name</label>
+              <input type="text" id="form-company" placeholder="Enterprise Ltd." class="form-control">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="form-service">Required Solution Sector</label>
+            <select id="form-service" class="form-select">
+              <option value="contract-3pl">Contract Warehousing & 3PL</option>
+              <option value="road-express">Road Freight & LTL Distribution</option>
+              <option value="forwarding">Sea / Air Forwarding & Customs</option>
+              <option value="project-cargo">Project Cargo Handling</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="form-details">RFP Requirement Details</label>
+            <textarea id="form-details" placeholder="Describe cargo weight, warehousing square footage parameters, regional delivery routes, or SLA guidelines..." class="form-control" style="min-height: 140px;"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;"><i class="fa-solid fa-paper-plane"></i> Submit Solution RFP</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- REGIONAL OFFICE LOCATIONS GRID --- -->
+  <section class="section" style="background-color: var(--bg-white);">
+    <div class="container">
+      <div class="section-header animated fade-in-up">
+        <h2>Our Office Locations</h2>
+        <p>Operating critical regional hubs spanning key commercial ports and manufacturing zones.</p>
+      </div>
+      
+      <div class="offices-grid">
+        <!-- Office 1 -->
+        <div class="office-card animated fade-in-up" data-delay="0.1s">
+          <h3>Delhi (HQ)</h3>
+          <p><i class="fa-solid fa-map-location-dot" style="margin-right: 8px; color: var(--accent);"></i> Dwarka Sector-19, New Delhi - 110075</p>
+          <p><i class="fa-solid fa-envelope" style="margin-right: 8px; color: var(--accent);"></i> delhi@genexlogistics.in</p>
+          <p><i class="fa-solid fa-phone" style="margin-right: 8px; color: var(--accent);"></i> +91-11-28085421</p>
+        </div>
+        
+        <!-- Office 2 -->
+        <div class="office-card animated fade-in-up" data-delay="0.2s">
+          <h3>Mumbai</h3>
+          <p><i class="fa-solid fa-map-location-dot" style="margin-right: 8px; color: var(--accent);"></i> Navi Mumbai Cargo Hub, Maharashtra</p>
+          <p><i class="fa-solid fa-envelope" style="margin-right: 8px; color: var(--accent);"></i> mumbai@genexlogistics.in</p>
+          <p><i class="fa-solid fa-phone" style="margin-right: 8px; color: var(--accent);"></i> +91-22-27248031</p>
+        </div>
+
+        <!-- Office 3 -->
+        <div class="office-card animated fade-in-up" data-delay="0.3s">
+          <h3>Bengaluru</h3>
+          <p><i class="fa-solid fa-map-location-dot" style="margin-right: 8px; color: var(--accent);"></i> Whitefield Warehouse Zone, Bengaluru</p>
+          <p><i class="fa-solid fa-envelope" style="margin-right: 8px; color: var(--accent);"></i> blr@genexlogistics.in</p>
+          <p><i class="fa-solid fa-phone" style="margin-right: 8px; color: var(--accent);"></i> +91-80-41289045</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col footer-about">
+        <a href="index.html" class="logo">
+          <img src="logo.png" alt="Genex Logistics Logo" class="logo-img">
+        </a>
+        <p>India's leading third-party logistics (3PL) provider. We build robust, technology-driven warehousing, JIT line feeding, and freight solutions to support enterprise success.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Core Services</h4>
+        <ul class="footer-links-list">
+          <li><a href="services.html#3pl">3PL Warehouse Services</a></li>
+          <li><a href="services.html#warehousing">Storage & Shared Pallets</a></li>
+          <li><a href="services.html#distribution">LTL & Road Express</a></li>
+          <li><a href="services.html#global">Customs clearance & Freight</a></li>
+          <li><a href="services.html#project">Project Cargo Solutions</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Corporate Info</h4>
+        <ul class="footer-links-list">
+          <li><a href="about.html">Company Overview</a></li>
+          <li><a href="about.html#values">Mission & Vision</a></li>
+          <li><a href="about.html#timeline">Our Journey</a></li>
+          <li><a href="industries.html">Industries Served</a></li>
+          <li><a href="contact.html">Global Locations</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col footer-newsletter">
+        <h4>Industry Insights</h4>
+        <p>Subscribe to our newsletter for logistics optimization tactics and supply chain trends.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="email@company.com" class="form-control" required style="background-color: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); color: var(--text-light);">
+          <button type="submit" class="btn btn-primary" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Genex Logistics Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript & Analytics Tracker -->
+  <script src="tracker.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

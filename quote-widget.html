@@ -1,0 +1,3782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Genex Logistics is India's leading 3PL supply chain & warehousing services company. Specialized in high-complexity flows, JIT, e-commerce, pharma, and global distribution.">
+  <title>Genex Logistics | Premium 3PL Warehousing & Supply Chain Solutions</title>
+  
+  <!-- Custom CSS -->
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* --- CUSTOM PROPERTIES --- */
+:root {
+  --primary: #03123b;          /* Genex Dark Navy Blue */
+  --primary-light: #045cb4;    /* Genex Secondary Blue */
+  --primary-dark: #01081c;     /* Deep Navy Shadow */
+  --accent: #6cc334;           /* Genex Lime Green */
+  --accent-hover: #5cb224;
+  --accent-green: #6cc334;     /* Genex Lime Green */
+  --accent-green-hover: #5cb224;
+  --bg-light: #f0f5fa;         /* Genex Light Blue-Gray */
+  --bg-white: #ffffff;
+  --border-color: #d1d5db;
+  
+  --text-primary: #1e293b;     /* Slate 800 */
+  --text-secondary: #334155;   /* Slate 700 */
+  --text-muted: #64748b;       /* Slate 500 */
+  --text-light: #f8fafc;       /* Slate 50 */
+  
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 16px rgba(3, 18, 59, 0.06);
+  --shadow-lg: 0 16px 32px rgba(3, 18, 59, 0.1);
+  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- RESET & BASE STYLES --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* --- LAYOUT UTILITIES --- */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-alt {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+.section-alt h2 {
+  color: var(--bg-white);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+.section-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.section-alt .section-header p {
+  color: var(--text-muted);
+}
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+  border: 2px solid transparent;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: var(--border-color);
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--border-color);
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  background-color: var(--bg-white);
+  color: var(--primary);
+}
+
+.btn-white:hover {
+  background-color: var(--text-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--bg-white);
+}
+
+.btn-outline-white:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--bg-white);
+  transform: translateY(-2px);
+}
+
+/* --- NAVIGATION HEADER --- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all var(--transition-normal);
+  padding: 20px 0;
+}
+
+header.scrolled {
+  background-color: rgba(3, 18, 59, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-md);
+  padding: 12px 0;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 84px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+}
+
+.logo-img:hover {
+  transform: scale(1.03);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-green));
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.4rem;
+  font-family: var(--font-display);
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--bg-white);
+  letter-spacing: -0.5px;
+  font-family: var(--font-display);
+}
+
+.logo-text span {
+  color: var(--accent);
+}
+
+/* Scrolled navigation text changes if required, but since header is always dark blue, we keep text white for high contrast */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 0;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--accent);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: var(--transition-fast);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Dropdown styling */
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 250px;
+  background-color: var(--primary-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-lg);
+}
+
+.nav-item:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 10px 14px;
+  color: var(--text-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--accent);
+  padding-left: 18px;
+}
+
+/* Mobile Menu Toggle */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 28px;
+  height: 20px;
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--bg-white);
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: all var(--transition-fast);
+}
+
+.mobile-toggle span:nth-child(1) { top: 0; }
+.mobile-toggle span:nth-child(2) { top: 9px; }
+.mobile-toggle span:nth-child(3) { top: 18px; }
+
+.mobile-toggle.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.mobile-toggle.active span:nth-child(2) { opacity: 0; }
+.mobile-toggle.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+/* --- HERO SECTION --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--primary-dark);
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 40%);
+  display: flex;
+  align-items: center;
+  padding-top: 100px; /* spacing for fixed header */
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-content {
+  z-index: 10;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hero-badge span {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.hero h1 {
+  color: var(--bg-white);
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p.lead {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  max-width: 540px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-image-container {
+  position: relative;
+  z-index: 5;
+}
+
+/* Background grid vector graphic styling */
+.hero-vector {
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-illustration {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- THE LOGISTICS HUB WIDGET (TRACKER & ESTIMATOR) --- */
+.logistics-hub {
+  margin-top: -60px;
+  position: relative;
+  z-index: 30;
+}
+
+.widget-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.widget-header-standalone {
+  padding: 24px;
+  text-align: center;
+  background-color: var(--primary);
+  color: var(--bg-white);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.widget-tabs {
+  display: flex;
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.widget-tab {
+  flex: 1;
+  padding: 18px 24px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.widget-tab i {
+  font-size: 1.2rem;
+}
+
+.widget-tab:hover {
+  color: var(--primary);
+  background-color: rgba(15, 23, 42, 0.02);
+}
+
+.widget-tab.active {
+  color: var(--accent-hover);
+  background-color: var(--bg-white);
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 15px; /* adjust for border */
+}
+
+.widget-content {
+  padding: 36px;
+}
+
+.widget-panel {
+  display: none;
+}
+
+.widget-panel.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tracker styling */
+.tracker-form-group {
+  display: flex;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.form-control {
+  width: 100%;
+  padding: 16px 16px 16px 48px;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  color: var(--primary);
+  background-color: var(--bg-light);
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent);
+  background-color: var(--bg-white);
+  box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.1);
+}
+
+.tracker-result {
+  margin-top: 32px;
+  padding: 24px;
+  background-color: var(--bg-light);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--accent);
+  display: none;
+}
+
+.tracker-meta {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.tracker-meta span strong {
+  color: var(--primary);
+}
+
+.tracking-timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 20px;
+}
+
+.tracking-timeline::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  right: 40px;
+  height: 4px;
+  background-color: var(--border-color);
+  z-index: 1;
+}
+
+.timeline-progress-bar {
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  height: 4px;
+  background: linear-gradient(to right, var(--accent-green), var(--accent));
+  z-index: 2;
+  width: 0%;
+  transition: width 1s ease;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  flex: 1;
+}
+
+.step-node {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--bg-white);
+  border: 4px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-weight: 700;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  font-size: 1.1rem;
+}
+
+.timeline-step.completed .step-node {
+  border-color: var(--accent-green);
+  background-color: var(--accent-green);
+  color: var(--bg-white);
+}
+
+.timeline-step.active .step-node {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 0 6px rgba(6, 182, 212, 0.15);
+}
+
+.step-label {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+}
+
+.timeline-step.completed .step-label {
+  color: var(--accent-green-hover);
+}
+
+.timeline-step.active .step-label {
+  color: var(--accent-hover);
+  font-weight: 700;
+}
+
+.step-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Estimator Tab styling */
+.estimator-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.form-group-select {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group-select label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.form-select {
+  padding: 14px 16px;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  color: var(--primary);
+  background-color: var(--bg-light);
+  cursor: pointer;
+  outline: none;
+}
+
+.form-select:focus {
+  border-color: var(--accent);
+  background-color: var(--bg-white);
+}
+
+.estimator-submit {
+  grid-column: span 3;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.estimator-result {
+  margin-top: 32px;
+  padding: 24px;
+  background-color: #f0fdf4;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: var(--radius-md);
+  display: none;
+}
+
+.estimator-result-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.estimator-summary h4 {
+  color: var(--accent-green-hover);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.estimator-summary p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.estimator-price-block {
+  text-align: right;
+  border-left: 2px solid rgba(16, 185, 129, 0.1);
+  padding-left: 24px;
+}
+
+.price-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.price-amount {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary);
+  font-family: var(--font-display);
+}
+
+.price-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* --- SERVICES CARD GRID --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  padding: 32px;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.service-icon {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(6, 182, 212, 0.08);
+  color: var(--accent-hover);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  transition: all var(--transition-fast);
+}
+
+.service-card:hover .service-icon {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.service-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-hover);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.service-link i {
+  transition: transform var(--transition-fast);
+}
+
+.service-card:hover .service-link i {
+  transform: translateX(4px);
+}
+
+/* --- INDUSTRIES GRID & SOLUTION SWITCHER --- */
+.industries-section {
+  background-color: var(--primary-light);
+  color: var(--text-light);
+}
+
+.industries-section h2 {
+  color: var(--bg-white);
+}
+
+.industry-tabs-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.industry-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 550px;
+  overflow-y: auto;
+  padding-right: 12px;
+}
+
+/* Custom scrollbar for industry menu */
+.industry-menu::-webkit-scrollbar {
+  width: 6px;
+}
+.industry-menu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+.industry-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+.industry-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.industry-menu-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.industry-menu-btn i {
+  font-size: 1.1rem;
+}
+
+.industry-menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: var(--bg-white);
+}
+
+.industry-menu-btn.active {
+  background-color: var(--accent);
+  color: var(--primary);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+.industry-panel {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  min-height: 480px;
+  animation: fadeIn 0.45s ease;
+}
+
+.industry-panel.active {
+  display: block;
+}
+
+.industry-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.industry-panel-icon {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(6, 182, 212, 0.1);
+  color: var(--accent);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.industry-panel-header h3 {
+  color: var(--bg-white);
+  font-size: 1.8rem;
+}
+
+.industry-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.industry-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.industry-feature-item {
+  display: flex;
+  gap: 16px;
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.feature-dot {
+  width: 28px;
+  height: 28px;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--accent-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+
+.industry-feature-item h4 {
+  color: var(--bg-white);
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.industry-feature-item p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* --- TRUST METRICS & COUNTERS --- */
+.stats-bar {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  padding: 60px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.stat-item {
+  text-align: center;
+  color: var(--text-light);
+}
+
+.stat-num {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  font-family: var(--font-display);
+  margin-bottom: 8px;
+}
+
+.stat-num span {
+  color: var(--accent-green);
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* --- CASE STUDIES CARD DISPLAY --- */
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.case-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.case-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(6, 182, 212, 0.2);
+}
+
+.case-image {
+  height: 200px;
+  background-color: var(--primary-light);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 4rem;
+}
+
+.case-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: var(--primary);
+  color: var(--accent);
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.case-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.case-metric {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent-green-hover);
+  font-family: var(--font-display);
+  margin-bottom: 12px;
+}
+
+.case-content h3 {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.case-content p {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* --- TESTIMONIAL SLIDER --- */
+.testimonials-section {
+  background-color: var(--bg-white);
+}
+
+.slider-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform var(--transition-slow);
+}
+
+.slide {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.testimonial-card {
+  background-color: var(--bg-light);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 3rem;
+  color: rgba(6, 182, 212, 0.15);
+  position: absolute;
+  top: 24px;
+  left: 48px;
+}
+
+.testimonial-text {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+  line-height: 1.8;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.author-name {
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-display);
+}
+
+.author-role {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.slider-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--primary);
+}
+
+.slider-btn:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+  border-color: var(--accent);
+}
+
+/* --- FAQ ACCORDION --- */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.faq-item.active {
+  border-color: rgba(6, 182, 212, 0.2);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-header {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-header h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0;
+}
+
+.faq-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  transition: all var(--transition-fast);
+  font-size: 0.8rem;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+}
+
+.faq-body {
+  padding: 0 24px 24px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-top: 1px solid transparent;
+}
+
+.faq-item.active .faq-content {
+  max-height: 300px; /* arbitrary large value */
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: var(--primary-dark);
+  color: var(--text-muted);
+  padding: 80px 0 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+  gap: 48px;
+  margin-bottom: 60px;
+}
+
+.footer-col h4 {
+  color: var(--bg-white);
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.social-btn:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links-list a {
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.footer-links-list a:hover {
+  color: var(--accent);
+  padding-left: 4px;
+}
+
+.footer-newsletter p {
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter-form .form-control {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+}
+
+.newsletter-form .btn {
+  padding: 10px 16px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 24px;
+}
+
+/* --- SUBPAGE TIMELINE & VALUES --- */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: var(--border-color);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 24px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 32px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  border: 4px solid var(--bg-white);
+  z-index: 10;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -10px;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -10px;
+}
+
+.timeline-card {
+  background-color: var(--bg-white);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-year {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent-hover);
+  font-family: var(--font-display);
+  margin-bottom: 8px;
+}
+
+/* Values Grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.value-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.value-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(16, 185, 129, 0.08);
+  color: var(--accent-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto 24px;
+}
+
+/* Contact page support grids */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+}
+
+.contact-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contact-card {
+  display: flex;
+  gap: 20px;
+  background-color: var(--bg-white);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.contact-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(6, 182, 212, 0.08);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.contact-card-detail h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.contact-card-detail p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.contact-form-card {
+  background-color: var(--bg-white);
+  padding: 48px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.contact-form-card p {
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.form-group .form-control {
+  padding: 12px 16px;
+}
+
+.form-group textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Offsite Office Grid */
+.offices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.office-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.office-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: var(--primary);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.office-card p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* --- ANIMATION CLASS AND TRANSITIONS --- */
+.animated {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+  animation-timing-function: var(--transition-slow);
+}
+
+.fade-in-up {
+  animation-name: fadeInUp;
+}
+
+.slide-in-left {
+  animation-name: slideInLeft;
+}
+
+.scale-up {
+  animation-name: scaleUp;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 3rem; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .industry-tabs-container { grid-template-columns: 1fr; }
+  .industry-menu { flex-direction: row; max-height: unset; overflow-x: auto; padding-bottom: 12px; }
+  .industry-menu-btn { flex-shrink: 0; }
+  .case-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .offices-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 0; }
+  .hero { min-height: unset; padding-top: 140px; padding-bottom: 80px; }
+  .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 32px; }
+  .hero h1 { font-size: 2.5rem; }
+  .hero p.lead { margin: 0 auto 30px; }
+  .hero-actions { justify-content: center; }
+  .logistics-hub { margin-top: 0; padding-top: 40px; }
+  .widget-content { padding: 24px; }
+  .tracker-form-group { flex-direction: column; }
+  .estimator-grid { grid-template-columns: 1fr; }
+  .estimator-submit { grid-column: span 1; }
+  .estimator-result-grid { grid-template-columns: 1fr; text-align: center; }
+  .estimator-price-block { border-left: none; border-top: 2px solid rgba(16, 185, 129, 0.1); padding-left: 0; padding-top: 20px; }
+  .tracking-timeline { flex-direction: column; gap: 24px; padding: 0; }
+  .tracking-timeline::before { display: none; }
+  .timeline-progress-bar { display: none; }
+  .timeline-step { flex-direction: row; text-align: left; gap: 16px; width: 100%; }
+  .mobile-toggle { display: block; }
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--primary-dark);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 24px;
+    transition: left var(--transition-normal);
+    overflow-y: auto;
+    z-index: 999;
+  }
+  .nav-links.active { left: 0; }
+  .nav-item { width: 100%; }
+  .nav-dropdown {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    background: transparent;
+    border: none;
+    padding-left: 20px;
+    width: 100%;
+    display: none;
+    margin-top: 8px;
+    box-shadow: none;
+  }
+  .nav-item.active .nav-dropdown { display: block; }
+  .nav-cta { display: none; }
+  .values-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-form-card { padding: 24px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .timeline::before { left: 24px; }
+  .timeline-item { width: 100%; padding-left: 56px; padding-right: 0; text-align: left !important; }
+  .timeline-dot { left: 14px !important; }
+}
+
+@media (max-width: 480px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .case-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .offices-grid { grid-template-columns: 1fr; }
+  .testimonial-card { padding: 24px; }
+  .quote-icon { left: 20px; }
+}
+
+/* --- CHATBOT INTEGRATION STYLE SYSTEM --- */
+:root {
+  --chat-primary: #03123b;
+  --chat-accent: #6cc334;
+  --chat-accent-green: #6cc334;
+  --chat-bg-dark: rgba(3, 18, 59, 0.85);
+  --chat-bg-light: #f0f5fa;
+  --chat-text-dark: #1e293b;
+  --chat-text-light: #f8fafc;
+}
+
+#chatbot-trigger {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--chat-accent), var(--chat-accent-green));
+  color: var(--chat-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(108, 195, 52, 0.4);
+  border: none;
+  z-index: 9999;
+  transition: all var(--transition-normal);
+  animation: pulse-trigger 3s infinite;
+}
+
+#chatbot-trigger:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 15px 35px rgba(108, 195, 52, 0.6);
+}
+
+@keyframes pulse-trigger {
+  0% { box-shadow: 0 0 0 0 rgba(108, 195, 52, 0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(108, 195, 52, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(108, 195, 52, 0); }
+}
+
+#chatbot-window {
+  position: fixed;
+  bottom: 110px;
+  right: 30px;
+  width: 380px;
+  height: 550px;
+  background-color: var(--chat-bg-dark);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px) scale(0.95);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#chatbot-window.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.chatbot-header {
+  padding: 20px;
+  background: rgba(3, 18, 59, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatbot-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chatbot-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--chat-accent), var(--chat-accent-green));
+  color: var(--chat-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: var(--font-display);
+}
+
+.chatbot-title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-title {
+  color: var(--chat-text-light);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.chatbot-status {
+  font-size: 0.75rem;
+  color: var(--chat-accent-green);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chatbot-status::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--chat-accent-green);
+  border-radius: 50%;
+  animation: pulse-dot 1.5s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.6; }
+}
+
+.chatbot-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 20px;
+  transition: color var(--transition-fast);
+}
+
+.chatbot-close:hover {
+  color: var(--chat-text-light);
+}
+
+.chatbot-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+.chatbot-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.chat-msg {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  animation: message-fade 0.3s ease forwards;
+  word-wrap: break-word;
+}
+
+@keyframes message-fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-msg.bot {
+  align-self: flex-start;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--chat-text-light);
+  border-bottom-left-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chat-msg.user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, var(--chat-accent), rgba(6, 182, 212, 0.8));
+  color: var(--chat-primary);
+  font-weight: 500;
+  border-bottom-right-radius: 2px;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.15);
+}
+
+.quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  animation: message-fade 0.3s ease forwards;
+}
+
+.quick-reply-btn {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--chat-accent);
+  padding: 8px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.quick-reply-btn:hover {
+  background-color: var(--chat-accent);
+  color: var(--chat-primary);
+  border-color: var(--chat-accent);
+  transform: translateY(-1px);
+}
+
+.chatbot-footer {
+  padding: 16px 20px;
+  background: rgba(3, 18, 59, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.chatbot-input-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.chatbot-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--chat-text-light);
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.chatbot-input:focus {
+  border-color: var(--chat-accent);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.chatbot-send {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--chat-accent), var(--chat-accent-green));
+  color: var(--chat-primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all var(--transition-fast);
+}
+
+.chatbot-send:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(108, 195, 52, 0.3);
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 4px;
+}
+
+.typing-indicator .dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--text-muted);
+  border-radius: 50%;
+  animation: bounce-dot 1.4s infinite ease-in-out both;
+}
+
+.typing-indicator .dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-indicator .dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce-dot {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1.0); }
+}
+
+@media (max-width: 480px) {
+  #chatbot-window {
+    width: calc(100% - 40px);
+    height: 480px;
+    right: 20px;
+    bottom: 90px;
+  }
+  #chatbot-trigger {
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+
+</style>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- --- HEADER NAVIGATION --- -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Genex Logistics Logo" class="logo-img">
+      </a>
+      
+      <nav class="nav-links">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link active">Home</a>
+        </div>
+        <div class="nav-item">
+          <a href="about.html" class="nav-link">About Us</a>
+        </div>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link dropdown-trigger">Services <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i></a>
+          <div class="nav-dropdown">
+            <a href="services.html#3pl">3PL & Contract Logistics</a>
+            <a href="services.html#warehousing">Shared Warehousing</a>
+            <a href="services.html#distribution">Road Express & LTL</a>
+            <a href="services.html#global">Global Air & Ocean Freight</a>
+            <a href="services.html#project">Project Logistics & ODC</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="industries.html" class="nav-link">Industries</a>
+        </div>
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </div>
+      </nav>
+      
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-calculator"></i> Get a Quote</a>
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- HERO SECTION --- -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content animated slide-in-left">
+        <div class="hero-badge">
+          <span></span> Sustainable 3PL Leadership
+        </div>
+        <h1>Precision Supply Chains.<br><span>Built for Uptime.</span></h1>
+        <p class="lead">We specialize in time-critical production logistics, spare-parts distribution, and after-sales flows—where a missed SLA stops a line or strands a customer. We're built around operational speed, not just square footage.</p>
+        <div class="hero-actions">
+          <a href="#inquiry-form-section" class="btn btn-primary"><i class="fa-solid fa-handshake"></i> Partner With Us</a>
+          <a href="#estimator-section" class="btn btn-outline-white"><i class="fa-solid fa-calculator"></i> Quote Estimator</a>
+        </div>
+      </div>
+      <div class="hero-image-container animated scale-up" data-delay="0.2s">
+        <div class="hero-vector"></div>
+        <img src="logistics_hero.png" alt="Genex modern logistics facility" class="hero-illustration">
+      </div>
+    </div>
+  </section>
+
+  <!-- --- THE LOGISTICS HUB WIDGET --- -->
+  <section class="section logistics-hub" id="estimator-section">
+    <div class="container">
+      <div class="widget-card animated fade-in-up">
+        <div class="widget-header-standalone" id="quote-estimator">
+          <i class="fa-solid fa-calculator"></i> Instant Quote Estimator
+        </div>
+        
+        <div class="widget-content">
+          <!-- Estimator Panel -->
+          <div class="widget-panel active" id="estimator-panel">
+            <form id="estimator-form" class="estimator-grid">
+              <div class="form-group-select">
+                <label for="est-service">Select Logistics Service</label>
+                <select id="est-service" class="form-select">
+                  <option value="warehousing">3PL Contract Warehousing & storage</option>
+                  <option value="distribution">Express Distribution / FTL</option>
+                  <option value="global">Global Ocean/Air Forwarding</option>
+                  <option value="project">Project Logistics & ODC Handling</option>
+                </select>
+              </div>
+              
+              <div class="form-group-select">
+                <label for="est-weight">Estimated Cargo Weight Class</label>
+                <select id="est-weight" class="form-select">
+                  <option value="light">Standard (Under 1,000 kg)</option>
+                  <option value="mid">Commercial Bulk (1,000 - 10,000 kg)</option>
+                  <option value="heavy">Heavy-Duty / ODC (Over 10,000 kg)</option>
+                </select>
+              </div>
+              
+              <div class="form-group-select">
+                <label for="est-industry">Your Industry Sector</label>
+                <select id="est-industry" class="form-select">
+                  <option value="automotive">Automotive & Spares</option>
+                  <option value="ecommerce">E-commerce & Retail</option>
+                  <option value="pharma">Pharma & Healthcare</option>
+                  <option value="chemicals">Chemicals & Oils</option>
+                  <option value="electronics">Electronics & Telecom</option>
+                </select>
+              </div>
+              
+              <div class="estimator-submit">
+                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-receipt"></i> Calculate Estimate</button>
+              </div>
+            </form>
+            
+            <div id="estimator-result" class="estimator-result">
+              <div class="estimator-result-grid">
+                <div class="estimator-summary">
+                  <h4 id="est-disp-service">3PL Supply Chain Solutions</h4>
+                  <p id="est-disp-details">Configured for Automotive requirements (Heavy cargo). Final price depends on customs, storage days, and specific route parameters.</p>
+                </div>
+                <div class="estimator-price-block">
+                  <div class="price-title">Est. Base Charge</div>
+                  <div class="price-amount" id="est-disp-price">₹0</div>
+                  <div class="price-sub">*Excludes taxes & handling fuel surcharges</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- CORE SERVICES --- -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animated fade-in-up">
+        <h2>End-To-End Logistics Services</h2>
+        <p>Providing seamless, technology-integrated warehousing and distribution solutions nationwide.</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Card 1 -->
+        <div class="service-card animated fade-in-up" data-delay="0.1s">
+          <div class="service-icon"><i class="fa-solid fa-warehouse"></i></div>
+          <h3>Supply Chain Solutions</h3>
+          <p>Integrated inbound, production line feeding, kitting, bonded warehousing, and FTWZ setups for maximum efficiency.</p>
+          <a href="services.html#3pl" class="service-link">Explore Solutions <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <!-- Card 2 -->
+        <div class="service-card animated fade-in-up" data-delay="0.2s">
+          <div class="service-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+          <h3>Distribution & Road Express</h3>
+          <p>Door-to-door transportation, express cargo, Milk Run logistics, JIT parts supply, LTL distribution, and reverse logistics.</p>
+          <a href="services.html#distribution" class="service-link">Explore Network <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <!-- Card 3 -->
+        <div class="service-card animated fade-in-up" data-delay="0.3s">
+          <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+          <h3>Global Freight Forwarding</h3>
+          <p>Reliable customs clearance handling, ocean & air freight, project imports/exports, and cost-effective LCL consolidation.</p>
+          <a href="services.html#global" class="service-link">Explore Customs <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <!-- Card 4 -->
+        <div class="service-card animated fade-in-up" data-delay="0.4s">
+          <div class="service-icon"><i class="fa-solid fa-dolly"></i></div>
+          <h3>Project Cargo Logistics</h3>
+          <p>Expert logistics planning, heavy ODC/OWC haulage, project feasibility studies, and integrated material management.</p>
+          <a href="services.html#project" class="service-link">Explore Projects <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- STATS BAR --- -->
+  <section class="stats-bar">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-num" data-target="5" data-suffix="M+ Sq. Ft.">0</div>
+        <div class="stat-label">Modern Warehouses Managed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="99" data-suffix=".9% Success">0</div>
+        <div class="stat-label">SLA Delivery Achievement</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="28" data-suffix="+ States">0</div>
+        <div class="stat-label">PAN India Network Coverage</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="500" data-suffix="+ Vehicles">0</div>
+        <div class="stat-label">Express Fleet Capacity</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- INDUSTRIES SOLUTIONS SWITCHER --- -->
+  <section class="section industries-section">
+    <div class="container">
+      <div class="section-header animated fade-in-up">
+        <h2>Tailored Industry Vertical Solutions</h2>
+        <p>Bespoke logistics solutions addressing complexity, compliance, and velocity across key business sectors.</p>
+      </div>
+      
+      <div class="industry-tabs-container">
+        <!-- Left Tab Menu -->
+        <div class="industry-menu animated slide-in-left">
+          <button class="industry-menu-btn active" data-industry="auto">
+            <span>Automotive & Spares</span> <i class="fa-solid fa-car-side"></i>
+          </button>
+          <button class="industry-menu-btn" data-industry="ecommerce">
+            <span>E-commerce & D2C</span> <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+          <button class="industry-menu-btn" data-industry="pharma">
+            <span>Pharma & Healthcare</span> <i class="fa-solid fa-house-medical"></i>
+          </button>
+          <button class="industry-menu-btn" data-industry="fmcg">
+            <span>FMCG & Retail Logistics</span> <i class="fa-solid fa-store"></i>
+          </button>
+          <button class="industry-menu-btn" data-industry="fashion">
+            <span>Apparel & Fashion</span> <i class="fa-solid fa-shirt"></i>
+          </button>
+          <button class="industry-menu-btn" data-industry="chemical">
+            <span>Chemical & Oils</span> <i class="fa-solid fa-flask"></i>
+          </button>
+        </div>
+        
+        <!-- Right Details Panels -->
+        <div class="industry-panels animated scale-up" data-delay="0.1s">
+          <!-- Auto Panel -->
+          <div class="industry-panel active" id="auto-panel">
+            <div class="industry-panel-header">
+              <div class="industry-panel-icon"><i class="fa-solid fa-car-side"></i></div>
+              <h3>Automotive Supply & Parts Distribution</h3>
+            </div>
+            <p class="industry-desc">The automotive sector demands absolute precision, JIT speed, and zero margin for error. We support OEMs, tier-1 suppliers, and aftermarket networks to keep production lines running flawlessly.</p>
+            <div class="industry-features-grid">
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Just-In-Time (JIT) Delivery</h4>
+                  <p>Synchronized materials feeding directly to the plant assembly lines.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Multi-SKU Inventory Tracking</h4>
+                  <p>Real-time tracking for thousands of automotive spare components.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Heavy Machinery Handling</h4>
+                  <p>Specialized equipment and transport for engines and batteries.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Reverse Logistics</h4>
+                  <p>Seamless management of returns, core exchanges, and defective parts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- E-commerce Panel -->
+          <div class="industry-panel" id="ecommerce-panel">
+            <div class="industry-panel-header">
+              <div class="industry-panel-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+              <h3>E-commerce & Omnichannel Fulfillment</h3>
+            </div>
+            <p class="industry-desc">Speed and accuracy define e-commerce. We provide scalable warehousing, rapid pick-pack, and hyper-reliable last-mile shipping to bolster your digital storefront operations.</p>
+            <div class="industry-features-grid">
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Same-Day Fulfillment</h4>
+                  <p>Quick turnaround times with rapid cut-offs for dispatching orders.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Omnichannel Logistics</h4>
+                  <p>Unified storage and fulfillment for marketplaces, websites, and physical outlets.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Hassle-Free Returns</h4>
+                  <p>Inspection, repackaging, and restocking of returned consumer goods.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Peak Season Scalability</h4>
+                  <p>Flexible warehouse space & workforce to handle holiday order spikes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pharma Panel -->
+          <div class="industry-panel" id="pharma-panel">
+            <div class="industry-panel-header">
+              <div class="industry-panel-icon"><i class="fa-solid fa-house-medical"></i></div>
+              <h3>Pharmaceuticals & Healthcare Compliance</h3>
+            </div>
+            <p class="industry-desc">Precision, temperature controls, and absolute compliance are vital for healthcare. We manage life-critical logistics with WHO-GDP standards to protect vaccine and drug integrity.</p>
+            <div class="industry-features-grid">
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Cold Chain Logistics</h4>
+                  <p>Strict temperature-controlled transport and storage (2°C to 8°C).</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>WHO-GDP Compliant</h4>
+                  <p>Certified practices ensuring medical cargo remains pristine.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Batch & Expiry Controls</h4>
+                  <p>FIFO and FEFO inventory tracking to prevent product wastage.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Tamper-Proof Security</h4>
+                  <p>CCTV monitored, restricted-access pharmaceutical vault storage.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FMCG Panel -->
+          <div class="industry-panel" id="fmcg-panel">
+            <div class="industry-panel-header">
+              <div class="industry-panel-icon"><i class="fa-solid fa-store"></i></div>
+              <h3>High-Velocity FMCG & Retail Distribution</h3>
+            </div>
+            <p class="industry-desc">FMCG demands consistent velocity and shelf-stocking efficiency. Our nationwide hub system is configured for swift volume distributions, keeping shelves full.</p>
+            <div class="industry-features-grid">
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>High-Volume Dispatch</h4>
+                  <p>Cross-docking and bulk consolidation for fast distribution turnarounds.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Expiry Date Management</h4>
+                  <p>System-driven batch control prevents warehouse obsolete stock build-up.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Supermarket Replenishment</h4>
+                  <p>Timely schedules supporting local stores, hubs, and retailers.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Rural Market Access</h4>
+                  <p>Extensive network delivering to tier-2, tier-3, and rural marketplaces.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fashion Panel -->
+          <div class="industry-panel" id="fashion-panel">
+            <div class="industry-panel-header">
+              <div class="industry-panel-icon"><i class="fa-solid fa-shirt"></i></div>
+              <h3>Apparel & Fashion Logistics</h3>
+            </div>
+            <p class="industry-desc">Seasonality and style diversity define the fashion sector. We ensure swift collections rollouts with dynamic warehouse management supporting diverse SKUs.</p>
+            <div class="industry-features-grid">
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Multi-SKU Sorting</h4>
+                  <p>Organized management of variable colors, sizes, and collection styles.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Garment Care</h4>
+                  <p>Quality preservation in pristine, climate-stabilized warehouse grids.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Seasonal Scalability</h4>
+                  <p>Flexible warehouse resources to handle new-season launching flows.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Fast Pick & Pack</h4>
+                  <p>Speedy sorting supporting direct retail shop inventory supplies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chemical Panel -->
+          <div class="industry-panel" id="chemical-panel">
+            <div class="industry-panel-header">
+              <div class="industry-panel-icon"><i class="fa-solid fa-flask"></i></div>
+              <h3>Chemicals & Oils Hazmat Handling</h3>
+            </div>
+            <p class="industry-desc">Strict security, regulatory alignment, and certified expertise are mandatory. We offer secure, compliant, temperature-regulated facilities for volatile industrial chemicals.</p>
+            <div class="industry-features-grid">
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Hazmat Training</h4>
+                  <p>Trained logistics operators certified in handling hazardous cargo.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Safety Compliance</h4>
+                  <p>Warehousing layouts fully aligned with fire safety and EPA rules.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Secure Bulk Transport</h4>
+                  <p>Tanks and custom truck haulage designed for sensitive liquids.</p>
+                </div>
+              </div>
+              <div class="industry-feature-item">
+                <div class="feature-dot"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <h4>Regulatory Documentation</h4>
+                  <p>Assistance in getting transport permits, licensing, and compliance stamps.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- TRUST & TESTIMONIAL CAROUSEL --- -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header animated fade-in-up">
+        <h2>What Our Partners Say</h2>
+        <p>Reliability built on long-term partnerships with leading global corporations.</p>
+      </div>
+      
+      <div class="slider-container animated scale-up">
+        <div class="slider-track">
+          <!-- Slide 1 -->
+          <div class="slide">
+            <div class="testimonial-card">
+              <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="testimonial-text">"Before partnering with Genex, we struggled with production line feeding delays. Their 3PL and Just-In-Time solutions solved our SLA bottlenecks, saving us hours of downtime."</p>
+              <div class="testimonial-author">
+                <span class="author-name">Rajesh Kumar</span>
+                <span class="author-role">Director of Operations, Leading Auto Component Supplier</span>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+            <div class="testimonial-card">
+              <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="testimonial-text">"Managing distribution for pharmaceutical vaccines is stressful. Genex's compliant cold-chain storage and real-time tracking gave us total peace of mind for our critical batches."</p>
+              <div class="testimonial-author">
+                <span class="author-name">Dr. Amit Shah</span>
+                <span class="author-role">Head of Supply Chain, Global Vaccine Manufacturer</span>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide">
+            <div class="testimonial-card">
+              <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="testimonial-text">"Our e-commerce orders surge 4x during festive sales. Genex Logistics scaled up our warehousing space and fulfilled 99.8% of orders within 24 hours without a hitch."</p>
+              <div class="testimonial-author">
+                <span class="author-name">Neha Sharma</span>
+                <span class="author-role">Founder, D2C Fashion Brand</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slider-controls">
+          <button class="slider-btn prev" aria-label="Previous slide"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="slider-btn next" aria-label="Next slide"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FEATURED CASE STUDIES --- -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header animated fade-in-up">
+        <h2>Case Studies & Success Stories</h2>
+        <p>How we solve high-complexity logistics challenges for leading businesses.</p>
+      </div>
+      
+      <div class="case-grid">
+        <!-- Case 1 -->
+        <div class="case-card animated fade-in-up" data-delay="0.1s">
+          <div class="case-image">
+            <i class="fa-solid fa-ship"></i>
+            <span class="case-badge">Global Shipping</span>
+          </div>
+          <div class="case-content">
+            <div class="case-metric">-20% Transit Time</div>
+            <h3>LCL Consolidation for UK Fashion Retailer</h3>
+            <p>Streamlined consolidation of goods from multiple Indian suppliers, cutting shipping costs and border clearing cycles.</p>
+            <a href="services.html#global" class="service-link" style="color: var(--accent);">Read Case Details <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- Case 2 -->
+        <div class="case-card animated fade-in-up" data-delay="0.2s">
+          <div class="case-image">
+            <i class="fa-solid fa-bolt"></i>
+            <span class="case-badge">3PL Contract</span>
+          </div>
+          <div class="case-content">
+            <div class="case-metric">+35% SLA Efficiency</div>
+            <h3>Logistics for Power Back-up Manufacturer</h3>
+            <p>Restructured warehousing and local distribution dispatch routes to support OEM assembly operations.</p>
+            <a href="services.html#3pl" class="service-link" style="color: var(--accent);">Read Case Details <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- Case 3 -->
+        <div class="case-card animated fade-in-up" data-delay="0.3s">
+          <div class="case-image">
+            <i class="fa-solid fa-boxes-packing"></i>
+            <span class="case-badge">Warehousing</span>
+          </div>
+          <div class="case-content">
+            <div class="case-metric">99.9% Stock Accuracy</div>
+            <h3>Inventory Management for Telecom Giant</h3>
+            <p>Deployed high-density racking and RFID inventory tracking tools to secure critical hardware items.</p>
+            <a href="services.html#warehousing" class="service-link" style="color: var(--accent);">Read Case Details <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FAQ ACCORDION SECTION --- -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animated fade-in-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about our services and logistics capability.</p>
+      </div>
+      
+      <div class="faq-container animated scale-up">
+        <!-- Item 1 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>What does Genex Logistics specialize in?</h3>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-content">
+            <div class="faq-body">
+              Genex Logistics is a premier 3PL supply chain and warehousing logistics company. We specialize in high-complexity logistics sectors, including Just-In-Time production supply, express road distribution, hazmat chemical storage, cold-chain pharmaceutical setups, and complex project freight forwarding.
+            </div>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Do you operate nationwide?</h3>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-content">
+            <div class="faq-body">
+              Yes, Genex operates an extensive PAN India network across 28 states and Union Territories. We manage a robust infrastructure of over 5 million square feet of warehousing space and maintain a comprehensive cargo shipping network.
+            </div>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>What is your commitment to sustainability?</h3>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-content">
+            <div class="faq-body">
+              Sustainability is core to Genex. We optimize transport routes to decrease carbon emissions, utilize energy-efficient lighting inside our warehousing facilities, manage eco-friendly kitting and waste recycling, and are working towards carbon-neutral operations.
+            </div>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>How do you support complex B2B supply chains?</h3>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="faq-content">
+            <div class="faq-body">
+              We offer integrated systems linking raw material sourcing to production lines (production line feeding) and down to client shipping hubs. With precise inventory tracking, bonded logistics, and specialized handling, we keep operations running with 99.9% uptime.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- INQUIRY CONVERSION FORM --- -->
+  <section class="section section-alt" id="inquiry-form-section">
+    <div class="container contact-grid">
+      <div class="contact-info-block animated slide-in-left">
+        <h2>Partner with India's Smartest 3PL Network</h2>
+        <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 1.1rem;">Ready to optimize your warehousing overheads, speed up transport schedules, and assure 99.9% logistics uptime? Reach out to our solution architects.</p>
+        
+        <div class="contact-card" style="background-color: rgba(255, 255, 255, 0.03); border-color: rgba(255,255,255,0.08);">
+          <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-card-detail">
+            <h3 style="color: var(--bg-white);">Email Solution Desk</h3>
+            <p style="color: var(--text-muted);">solutions@genexlogistics.in</p>
+          </div>
+        </div>
+
+        <div class="contact-card" style="background-color: rgba(255, 255, 255, 0.03); border-color: rgba(255,255,255,0.08);">
+          <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="contact-card-detail">
+            <h3 style="color: var(--bg-white);">Direct Hotline</h3>
+            <p style="color: var(--text-muted);">+91-11-28085421 (Mon-Sat, 9AM-6PM)</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Multi-step styled form -->
+      <div class="contact-form-card animated scale-up">
+        <h2>Request Custom Proposal</h2>
+        <p>Provide your cargo and facility needs to receive a formal assessment.</p>
+        
+        <form id="contact-inquiry-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-name">Contact Person *</label>
+              <input type="text" id="form-name" placeholder="John Doe" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email">Work Email *</label>
+              <input type="email" id="form-email" placeholder="john@company.com" class="form-control" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-phone">Phone Number</label>
+              <input type="tel" id="form-phone" placeholder="+91 99999 99999" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="form-company">Company Name</label>
+              <input type="text" id="form-company" placeholder="Enterprise Ltd." class="form-control">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="form-service">Required Solution</label>
+            <select id="form-service" class="form-select">
+              <option value="contract-3pl">Contract Warehousing & 3PL</option>
+              <option value="road-express">Road Freight & LTL Distribution</option>
+              <option value="forwarding">Sea / Air Forwarding & Customs</option>
+              <option value="project-cargo">Project Cargo Handling</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="form-details">Requirement Details</label>
+            <textarea id="form-details" placeholder="Describe cargo volume, warehousing square footage needs, distribution routes, or timelines..." class="form-control"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;"><i class="fa-solid fa-paper-plane"></i> Submit Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col footer-about">
+        <a href="index.html" class="logo">
+          <img src="logo.png" alt="Genex Logistics Logo" class="logo-img">
+        </a>
+        <p>India's leading third-party logistics (3PL) provider. We build robust, technology-driven warehousing, JIT line feeding, and freight solutions to support enterprise success.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Core Services</h4>
+        <ul class="footer-links-list">
+          <li><a href="services.html#3pl">3PL Warehouse Services</a></li>
+          <li><a href="services.html#warehousing">Storage & Shared Pallets</a></li>
+          <li><a href="services.html#distribution">LTL & Road Express</a></li>
+          <li><a href="services.html#global">Customs clearance & Freight</a></li>
+          <li><a href="services.html#project">Project Cargo Solutions</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Corporate Info</h4>
+        <ul class="footer-links-list">
+          <li><a href="about.html">Company Overview</a></li>
+          <li><a href="about.html#values">Mission & Vision</a></li>
+          <li><a href="about.html#timeline">Our Journey</a></li>
+          <li><a href="industries.html">Industries Served</a></li>
+          <li><a href="contact.html">Global Locations</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col footer-newsletter">
+        <h4>Industry Insights</h4>
+        <p>Subscribe to our newsletter for logistics optimization tactics and supply chain trends.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="email@company.com" class="form-control" required style="background-color: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); color: var(--text-light);">
+          <button type="submit" class="btn btn-primary" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Genex Logistics Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript & Analytics Tracker -->
+  
+  <!-- 1. Web Analytics Tracker (tracker.js) -->
+  <script>
+  /**
+ * Genex Logistics - Advanced Web Analytics & Form Tracking Client
+ * Exposes page timing, behavioral retention flow, form abandonment, and exit beacons.
+ */
+(function() {
+  const BACKEND_URL = 'http://localhost:5000'; // Target Node.js Express server
+  
+  // 1. Identity & Session Helpers
+  function generateUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      const r = Math.random() * 16 | 0;
+      const v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }
+
+  function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+  }
+
+  function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i=0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  // Get or initialize persistent visitor ID
+  function getVisitorId() {
+    let visitorId = getCookie('visitor_id');
+    if (!visitorId) {
+      visitorId = generateUUID();
+      setCookie('visitor_id', visitorId, 365); // 1 year persistence
+    }
+    return visitorId;
+  }
+
+  // Get or initialize tab-session ID
+  function getSessionId() {
+    let sessionId = sessionStorage.getItem('session_id');
+    if (!sessionId) {
+      sessionId = generateUUID();
+      sessionStorage.setItem('session_id', sessionId);
+    }
+    return sessionId;
+  }
+
+  const visitorId = getVisitorId();
+  const sessionId = getSessionId();
+
+  // 2. Event Dispatch Engine
+  function sendEvent(payload, useBeacon = false) {
+    // Inject system state metadata
+    const fullPayload = {
+      visitorId,
+      sessionId,
+      url: window.location.href,
+      path: window.location.pathname,
+      title: document.title,
+      referrer: document.referrer,
+      screenResolution: `${window.screen.width}x${window.screen.height}`,
+      timestamp: new Date().toISOString(),
+      ...payload
+    };
+
+    const targetUrl = `${BACKEND_URL}/api/analytics/event`;
+
+    if (useBeacon && typeof navigator.sendBeacon === 'function') {
+      const blob = new Blob([JSON.stringify(fullPayload)], { type: 'application/json' });
+      navigator.sendBeacon(targetUrl, blob);
+    } else {
+      fetch(targetUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(fullPayload),
+        keepalive: true
+      }).catch(err => console.warn('Analytics push failed:', err));
+    }
+  }
+
+  // 3. Performance ("Buffer Time") Tracker
+  function trackPerformance() {
+    // Use modern PerformanceObserver if available, otherwise fallback to window.load
+    const perfData = {};
+    
+    const navEntries = window.performance.getEntriesByType('navigation');
+    if (navEntries && navEntries.length > 0) {
+      const nav = navEntries[0];
+      perfData.loadTimeMs = Math.round(nav.loadEventEnd || (performance.now()));
+      perfData.ttfbMs = Math.round(nav.responseStart - nav.requestStart);
+      
+      // Cache hits analysis
+      if (nav.transferSize === 0 && nav.decodedBodySize > 0) {
+        perfData.cacheStatus = 'disk-cache';
+      } else {
+        perfData.cacheStatus = 'network';
+      }
+    } else {
+      // Legacy Timing API fallback
+      const timing = window.performance.timing;
+      if (timing) {
+        perfData.loadTimeMs = timing.loadEventEnd - timing.navigationStart;
+        perfData.ttfbMs = timing.responseStart - timing.requestStart;
+        perfData.cacheStatus = 'legacy';
+      }
+    }
+
+    sendEvent({
+      eventType: 'pageview',
+      loadTimeMs: perfData.loadTimeMs || 0,
+      ttfbMs: perfData.ttfbMs || 0,
+      cacheStatus: perfData.cacheStatus || 'unknown'
+    });
+  }
+
+  // Hook performance loading after fully rendered
+  if (document.readyState === 'complete') {
+    setTimeout(trackPerformance, 100);
+  } else {
+    window.addEventListener('load', () => setTimeout(trackPerformance, 100));
+  }
+
+  // 4. Inactivity & Idle Time Tracker
+  let idleTime = 0;
+  let isIdle = false;
+  const IDLE_THRESHOLD_SECONDS = 15; // 15 seconds threshold
+  let idleInterval;
+
+  function resetIdleTimer() {
+    if (isIdle) {
+      isIdle = false;
+      sendEvent({
+        eventType: 'user_active',
+        idleDurationSec: idleTime
+      });
+    }
+    idleTime = 0;
+  }
+
+  // Listen for activity metrics
+  ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'].forEach(evt => {
+    window.addEventListener(evt, resetIdleTimer, { passive: true });
+  });
+
+  idleInterval = setInterval(() => {
+    idleTime++;
+    if (idleTime >= IDLE_THRESHOLD_SECONDS && !isIdle) {
+      isIdle = true;
+      sendEvent({
+        eventType: 'user_idle',
+        idleDurationSec: idleTime
+      });
+    }
+  }, 1000);
+
+  // 5. Form Abandonment & In-Progress Fields Tracker
+  let formStarted = false;
+  let formSubmitted = false;
+  const touchedFields = new Set();
+  const formElement = document.getElementById('contact-inquiry-form');
+
+  if (formElement) {
+    const inputs = formElement.querySelectorAll('input, select, textarea');
+    
+    inputs.forEach(input => {
+      // Monitor field focus
+      input.addEventListener('focus', () => {
+        if (!formStarted) {
+          formStarted = true;
+          sendEvent({ eventType: 'form_start', target: 'form#contact-inquiry-form' });
+        }
+        touchedFields.add(input.id || input.name);
+      });
+
+      // Monitor field typing inputs
+      input.addEventListener('input', () => {
+        touchedFields.add(input.id || input.name);
+      });
+    });
+
+    // Capture success state to cancel abandonment trigger
+    formElement.addEventListener('submit', () => {
+      formSubmitted = true;
+      sendEvent({
+        eventType: 'form_submit_click',
+        target: 'form#contact-inquiry-form',
+        value: Array.from(touchedFields).join(',')
+      });
+    });
+  }
+
+  // 6. Behavioral Journey & Drop-off exit page trigger
+  function handleExitBeacon() {
+    clearInterval(idleInterval);
+    
+    // If B2B RFP was started but never sent, trigger form abandonment beacon
+    if (formStarted && !formSubmitted) {
+      sendEvent({
+        eventType: 'form_abandon',
+        target: 'form#contact-inquiry-form',
+        value: Array.from(touchedFields).join(',')
+      }, true);
+    }
+
+    // Capture exit page parameters
+    sendEvent({
+      eventType: 'exit_page',
+      idleDurationSec: idleTime
+    }, true);
+  }
+
+  // Modern browsers: visibilitychange is highly reliable on mobile & desktop exit
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+      handleExitBeacon();
+    }
+  });
+
+  // Fallback for older browsers
+  window.addEventListener('beforeunload', handleExitBeacon);
+
+})();
+
+  </script>
+
+  <!-- 2. Rebranded Chat Assistant: LogiBot (chatbot.js) -->
+  <script>
+  (function() {
+  // Inject FontAwesome if not already loaded (to support close & send icons)
+  if (!document.querySelector('link[href*="font-awesome"]')) {
+    const faLink = document.createElement('link');
+    faLink.rel = 'stylesheet';
+    faLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+    document.head.appendChild(faLink);
+  }
+
+
+  // Build and Inject HTML Elements
+  const chatbotTrigger = document.createElement('button');
+  chatbotTrigger.id = 'chatbot-trigger';
+  chatbotTrigger.setAttribute('aria-label', 'Open support chat');
+  chatbotTrigger.innerHTML = '<i class="fa-solid fa-comments"></i>';
+
+  const chatbotWindow = document.createElement('div');
+  chatbotWindow.id = 'chatbot-window';
+  chatbotWindow.innerHTML = `
+    <div class="chatbot-header">
+      <div class="chatbot-header-info">
+        <div class="chatbot-avatar">G</div>
+        <div class="chatbot-title-container">
+          <span class="chatbot-title">Genex LogiBot</span>
+          <span class="chatbot-status">Online AI Assistant</span>
+        </div>
+      </div>
+      <button class="chatbot-close" aria-label="Close chat">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="chatbot-messages" id="chatbot-messages-log"></div>
+    <div class="chatbot-footer">
+      <div class="chatbot-input-wrapper">
+        <input type="text" class="chatbot-input" id="chatbot-user-input" placeholder="Ask LogiBot..." autocomplete="off">
+      </div>
+      <button class="chatbot-send" id="chatbot-send-btn" aria-label="Send message">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </div>
+  `;
+
+  document.body.appendChild(chatbotTrigger);
+  document.body.appendChild(chatbotWindow);
+
+  // Selector cache
+  const messagesLog = document.getElementById('chatbot-messages-log');
+  const userInput = document.getElementById('chatbot-user-input');
+  const sendBtn = document.getElementById('chatbot-send-btn');
+  const closeBtn = chatbotWindow.querySelector('.chatbot-close');
+
+  // Toggle Visibility
+  chatbotTrigger.addEventListener('click', () => {
+    chatbotWindow.classList.add('active');
+    // Set focus to input
+    setTimeout(() => userInput.focus(), 150);
+  });
+
+  closeBtn.addEventListener('click', () => {
+    chatbotWindow.classList.remove('active');
+  });
+
+  // Append single message bubble
+  function appendMessage(text, sender = 'bot', hasHtml = false) {
+    const msgDiv = document.createElement('div');
+    msgDiv.classList.add('chat-msg', sender);
+    if (hasHtml) {
+      msgDiv.innerHTML = text;
+    } else {
+      msgDiv.textContent = text;
+    }
+    messagesLog.appendChild(msgDiv);
+    messagesLog.scrollTop = messagesLog.scrollHeight;
+    return msgDiv;
+  }
+
+  // Append quick reply buttons
+  function appendQuickReplies() {
+    const repliesDiv = document.createElement('div');
+    repliesDiv.classList.add('quick-replies');
+    
+    const options = [
+      { text: 'Get Quote 💰', value: 'quote' },
+      { text: 'Services 🏢', value: 'services' },
+      { text: 'Industries 🏭', value: 'industries' },
+      { text: 'Contact 📞', value: 'contact' }
+    ];
+
+    options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.classList.add('quick-reply-btn');
+      btn.textContent = opt.text;
+      btn.addEventListener('click', () => {
+        handleUserInput(opt.text);
+      });
+      repliesDiv.appendChild(btn);
+    });
+
+    messagesLog.appendChild(repliesDiv);
+    messagesLog.scrollTop = messagesLog.scrollHeight;
+  }
+
+  // Display bouncing typing indicator
+  let currentTypingIndicator = null;
+  function showTypingIndicator() {
+    if (currentTypingIndicator) return;
+    
+    currentTypingIndicator = document.createElement('div');
+    currentTypingIndicator.classList.add('typing-indicator');
+    currentTypingIndicator.innerHTML = `
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    `;
+    messagesLog.appendChild(currentTypingIndicator);
+    messagesLog.scrollTop = messagesLog.scrollHeight;
+  }
+
+  function removeTypingIndicator() {
+    if (currentTypingIndicator && currentTypingIndicator.parentNode) {
+      currentTypingIndicator.parentNode.removeChild(currentTypingIndicator);
+      currentTypingIndicator = null;
+    }
+  }
+
+  // Initial Welcome Message
+  appendMessage("Welcome to Genex Logistics! 👋 I am LogiBot, your intelligent supply chain assistant. How can I help you today?", 'bot');
+  appendQuickReplies();
+
+  // AI Response matcher
+  function getResponseText(text) {
+    const query = text.toLowerCase().trim();
+
+    if (query.includes('track') || query.includes('consignment') || query.includes('shipment')) {
+      return `📦 <strong>Shipment Tracking Support</strong>:<br><br>` +
+             `To track your cargo consignment in real-time, please contact our solutions desk directly:<br>` +
+             `• <strong>Email Support:</strong> <a href="mailto:solutions@genexlogistics.in" style="color: var(--chat-accent); text-decoration: underline;">solutions@genexlogistics.in</a><br>` +
+             `• <strong>Direct Hotline:</strong> +91-11-28085421 (Mon-Sat, 9AM-6PM)<br><br>` +
+             `Our team will provide you with the exact coordinates and transit details for your cargo.`;
+    }
+
+    // Quote / Pricing Info
+    if (query.includes('quote') || query.includes('pricing') || query.includes('cost') || query.includes('price') || query.includes('charge') || query.includes('rate') || query.includes('estimator') || query.includes('calculate')) {
+      return `💰 <strong>Instant Proposal & Quotes</strong>:<br><br>` +
+             `1. Use our interactive <strong>Instant Quote Estimator</strong> widget in the Logistics Hub section of the homepage for a quick baseline calculation.<br>` +
+             `2. For a structured corporate proposal, please scroll down to the <strong>Request Custom Proposal</strong> form on our homepage and submit details.<br>` +
+             `3. Or email our solutions desk at <a href="mailto:solutions@genexlogistics.in" style="color: var(--chat-accent); text-decoration: underline;">solutions@genexlogistics.in</a>.`;
+    }
+
+    // Services Queries
+    if (query.includes('service') || query.includes('3pl') || query.includes('warehouse') || query.includes('storage') || query.includes('freight') || query.includes('distribution') || query.includes('express') || query.includes('forwarding') || query.includes('project') || query.includes('odc')) {
+      return `🏢 <strong>Genex Logistics Core Capabilities:</strong><br><br>` +
+             `• <strong>3PL & Contract Logistics:</strong> High-complexity warehousing layouts, JIT manufacturing feeds, and FTWZ setups.<br>` +
+             `• <strong>Shared Warehousing:</strong> Scalable pallet structures and cross-docking.<br>` +
+             `• <strong>Express & Road LTL:</strong> MILK run deliveries and nationwide FTL/LTL freight forwarding.<br>` +
+             `• <strong>Global Freight Forwarding:</strong> International ocean and air shipping with quick customs clearance.<br>` +
+             `• <strong>Project Logistics & ODC:</strong> Feasibility surveys and hauling of heavy oversized cargo.`;
+    }
+
+    // Contact Details
+    if (query.includes('contact') || query.includes('phone') || query.includes('call') || query.includes('email') || query.includes('number') || query.includes('hotline') || query.includes('support') || query.includes('office') || query.includes('location')) {
+      return `📞 <strong>Direct Contact Channels:</strong><br><br>` +
+             `• <strong>Corporate Email:</strong> <a href="mailto:solutions@genexlogistics.in" style="color: var(--chat-accent); text-decoration: underline;">solutions@genexlogistics.in</a><br>` +
+             `• <strong>Direct Hotline:</strong> +91-11-28085421 (Mon-Sat, 9AM to 6PM)<br>` +
+             `• <strong>Offices:</strong> Headquartered in New Delhi, operating facilities in over 28 states PAN India.`;
+    }
+
+    // Industries
+    if (query.includes('industry') || query.includes('vertical') || query.includes('automotive') || query.includes('ecommerce') || query.includes('pharma') || query.includes('healthcare') || query.includes('chemical') || query.includes('retail') || query.includes('fashion')) {
+      return `⚡ <strong>Specialized Industry Solutions:</strong><br><br>` +
+             `• <strong>Automotive & Spares:</strong> JIT delivery and reverse logistics feeds.<br>` +
+             `• <strong>E-commerce & Retail:</strong> Rapid same-day pick-pack and seasonal scale-ups.<br>` +
+             `• <strong>Pharma & Cold-chain:</strong> WHO-GDP compliant vaulting and 2°C to 8°C temperature controls.<br>` +
+             `• <strong>Hazmat Chemicals:</strong> Certified security layouts, safe bulk haulage, and EPA permit clearance documentation.<br>` +
+             `• <strong>Apparel & Fashion:</strong> Complex multi-SKU inventory setups.`;
+    }
+
+    // General greetings & small talk
+    if (query.includes('hello') || query.includes('hi') || query.includes('hey') || query.includes('greeting') || query.includes('yo')) {
+      return `👋 Hello! I am LogiBot, the Genex AI assistant. How can I help you optimize your supply chain today? You can ask about shipping tracking, quotes, services, or contact numbers.`;
+    }
+
+    if (query.includes('thank') || query.includes('thanks') || query.includes('awesome') || query.includes('perfect') || query.includes('great')) {
+      return `😊 You're welcome! Genex is dedicated to keeping your production lines and distribution loops operating with 99.9% uptime. Let me know if you have any other questions.`;
+    }
+
+    // Default Fallback
+    return `👋 I am LogiBot, your Genex AI Assistant. I didn't quite catch that. You can query me on:<br><br>` +
+           `• <strong>Consignment Status</strong> (e.g. type: <strong>GNX-10294</strong>)<br>` +
+           `• <strong>Estimates & Costing</strong> (e.g. type: <strong>Get a quote</strong>)<br>` +
+           `• <strong>Capabilities</strong> (e.g. type: <strong>Warehousing services</strong>)<br>` +
+           `• <strong>Hotline/Support</strong> (e.g. type: <strong>How to contact you</strong>)`;
+  }
+
+  // Handle Input Submission
+  function handleUserInput(inputVal) {
+    const text = inputVal || userInput.value.trim();
+    if (!text) return;
+
+    // Append User Message
+    appendMessage(text, 'user');
+    if (!inputVal) userInput.value = '';
+
+    // Simulate Bot response with typing latency
+    showTypingIndicator();
+
+    setTimeout(() => {
+      removeTypingIndicator();
+      const responseHtml = getResponseText(text);
+      appendMessage(responseHtml, 'bot', true);
+    }, 900);
+  }
+
+  // Send Event Hooks
+  sendBtn.addEventListener('click', () => handleUserInput());
+  userInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      handleUserInput();
+    }
+  });
+
+  // Track page clicks to sync chat input if user clicks quick estimator or consignment tracker triggers in layout
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash === '#estimator-section' || window.location.hash === '#quote-estimator') {
+      // Prompt user in chat if window is active
+      if (chatbotWindow.classList.contains('active')) {
+        setTimeout(() => {
+          appendMessage("💡 You navigated to our Instant Quote Estimator! Enter your logistics specs to view a custom cost estimate.", 'bot');
+        }, 600);
+      }
+    }
+  });
+
+})();
+
+  </script>
+
+  <!-- 3. Page Controller & Cost Estimator (index.js) -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+  /* ==========================================================================
+     1. STICKY GLASSMORPHIC HEADER
+     ========================================================================== */
+  const header = document.querySelector('header');
+  const checkScroll = () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  };
+  window.addEventListener('scroll', checkScroll);
+  checkScroll(); // Run once in case page loads scrolled down
+
+  /* ==========================================================================
+     2. MOBILE NAVIGATION MENU
+     ========================================================================== */
+  const mobileToggle = document.querySelector('.mobile-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  if (mobileToggle && navLinks) {
+    mobileToggle.addEventListener('click', () => {
+      mobileToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking links (on mobile)
+    const links = document.querySelectorAll('.nav-link:not(.dropdown-trigger)');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Mobile dropdown toggle click handlers
+    navItems.forEach(item => {
+      const trigger = item.querySelector('.dropdown-trigger');
+      if (trigger) {
+        trigger.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            item.classList.toggle('active');
+          }
+        });
+      }
+    });
+  }
+
+
+
+  /* ==========================================================================
+     5. LOGISTICS QUOTE COST ESTIMATOR
+     ========================================================================== */
+  const estimatorForm = document.getElementById('estimator-form');
+  const estimatorResult = document.getElementById('estimator-result');
+
+  if (estimatorForm) {
+    estimatorForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const serviceType = document.getElementById('est-service').value;
+      const weightClass = document.getElementById('est-weight').value;
+      const industry = document.getElementById('est-industry').value;
+
+      // Base Rates calculation mock
+      let baseRate = 12000;
+      let serviceLabel = "3PL Supply Chain Solutions";
+
+      if (serviceType === 'warehousing') {
+        baseRate = 25000;
+        serviceLabel = "Dedicated 3PL Contract Warehousing";
+      } else if (serviceType === 'global') {
+        baseRate = 45000;
+        serviceLabel = "Global Air/Ocean Freight Clearance";
+      } else if (serviceType === 'distribution') {
+        baseRate = 15000;
+        serviceLabel = "Express Road Distribution / FTL";
+      } else if (serviceType === 'project') {
+        baseRate = 60000;
+        serviceLabel = "Project Cargo Logistics & ODC Handling";
+      }
+
+      // Weight multiplier
+      let multiplier = 1.0;
+      if (weightClass === 'mid') multiplier = 1.8;
+      if (weightClass === 'heavy') multiplier = 3.5;
+
+      // Industry discount/premium adjustments
+      let industryPremium = 1.0;
+      if (industry === 'pharma' || industry === 'chemicals') {
+        industryPremium = 1.25; // hazmat/temp compliance overhead
+      } else if (industry === 'ecommerce') {
+        industryPremium = 0.95; // high volume bulk shipping
+      }
+
+      const totalEstimate = Math.round(baseRate * multiplier * industryPremium);
+
+      // Render output values
+      document.getElementById('est-disp-service').innerText = serviceLabel;
+      document.getElementById('est-disp-details').innerText = `Configured for ${industry.toUpperCase()} requirements (${weightClass} cargo class). Subject to final survey.`;
+      
+      // Formatting number as Indian Rupee (INR) format (e.g. ₹ 45,200)
+      const formatter = new Intl.NumberFormat('en-IN', {
+        style: 'currency',
+        currency: 'INR',
+        maximumFractionDigits: 0
+      });
+      document.getElementById('est-disp-price').innerText = formatter.format(totalEstimate);
+
+      // Open results pane
+      estimatorResult.style.display = 'block';
+    });
+  }
+
+  /* ==========================================================================
+     6. INDUSTRY TAB SELECTOR
+     ========================================================================== */
+  const industryTabs = document.querySelectorAll('.industry-menu-btn');
+  const industryPanels = document.querySelectorAll('.industry-panel');
+
+  industryTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const selectedId = tab.getAttribute('data-industry');
+
+      // Update button highlights
+      industryTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      // Update visible details panel
+      industryPanels.forEach(panel => {
+        panel.classList.remove('active');
+        if (panel.id === `${selectedId}-panel`) {
+          panel.classList.add('active');
+        }
+      });
+    });
+  });
+
+  /* ==========================================================================
+     7. TESTIMONIAL SLIDER CAROUSEL
+     ========================================================================== */
+  const sliderTrack = document.querySelector('.slider-track');
+  const slides = document.querySelectorAll('.slide');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+
+  if (sliderTrack && slides.length > 0) {
+    let currentIndex = 0;
+    const slideCount = slides.length;
+    let autoSlideInterval;
+
+    const updateSlider = () => {
+      sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+    };
+
+    const nextSlide = () => {
+      currentIndex = (currentIndex + 1) % slideCount;
+      updateSlider();
+    };
+
+    const prevSlide = () => {
+      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+      updateSlider();
+    };
+
+    if (nextBtn && prevBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetTimer();
+      });
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetTimer();
+      });
+    }
+
+    const startTimer = () => {
+      autoSlideInterval = setInterval(nextSlide, 6000);
+    };
+
+    const resetTimer = () => {
+      clearInterval(autoSlideInterval);
+      startTimer();
+    };
+
+    startTimer();
+    
+    // Pause auto-sliding on hover
+    const sliderContainer = document.querySelector('.slider-container');
+    sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+    sliderContainer.addEventListener('mouseleave', startTimer);
+  }
+
+  /* ==========================================================================
+     8. FAQ ACCORDION PANEL TOGGLE
+     ========================================================================== */
+  const faqHeaders = document.querySelectorAll('.faq-header');
+
+  faqHeaders.forEach(headerEl => {
+    headerEl.addEventListener('click', () => {
+      const item = headerEl.parentElement;
+      const isActive = item.classList.contains('active');
+      const faqContent = item.querySelector('.faq-content');
+
+      // Close all other FAQs first
+      document.querySelectorAll('.faq-item').forEach(otherItem => {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.faq-content').style.maxHeight = null;
+      });
+
+      // Toggle current FAQ
+      if (!isActive) {
+        item.classList.add('active');
+        faqContent.style.maxHeight = faqContent.scrollHeight + 'px';
+      } else {
+        item.classList.remove('active');
+        faqContent.style.maxHeight = null;
+      }
+    });
+  });
+
+  /* ==========================================================================
+     9. SCROLL INTERSECTION ANIMATIONS
+     ========================================================================== */
+  const animatedElements = document.querySelectorAll('.animated');
+
+  if ('IntersectionObserver' in window) {
+    const animationObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = entry.target.getAttribute('data-delay') || '0s';
+          entry.target.style.animationDelay = delay;
+          
+          if (entry.target.classList.contains('fade-in-up')) {
+            entry.target.classList.add('fade-in-up');
+          }
+          entry.target.style.opacity = 1;
+          
+          const animationName = window.getComputedStyle(entry.target).animationName;
+          if (animationName === 'none') {
+            // Apply fallback if class list did not trigger automatically
+            const animClass = entry.target.classList.contains('slide-in-left') ? 'slideInLeft' : 'fadeInUp';
+            entry.target.style.animationName = animClass;
+          }
+          
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    animatedElements.forEach(el => animationObserver.observe(el));
+  } else {
+    // Fallback if browser doesn't support IntersectionObserver
+    animatedElements.forEach(el => {
+      el.style.opacity = 1;
+    });
+  }
+
+  /* ==========================================================================
+     10. LIVE COUNT-UP FOR NUMBERS
+     ========================================================================== */
+  const statNums = document.querySelectorAll('.stat-num');
+
+  const startCountUp = (el) => {
+    const target = parseInt(el.getAttribute('data-target'));
+    const suffix = el.getAttribute('data-suffix') || '';
+    let count = 0;
+    const duration = 2000; // 2 seconds
+    const increment = Math.ceil(target / (duration / 16)); // ~60fps
+
+    const updateCount = () => {
+      count += increment;
+      if (count >= target) {
+        el.innerHTML = target.toLocaleString('en-IN') + `<span>${suffix}</span>`;
+      } else {
+        el.innerHTML = count.toLocaleString('en-IN') + `<span>${suffix}</span>`;
+        requestAnimationFrame(updateCount);
+      }
+    };
+    
+    requestAnimationFrame(updateCount);
+  };
+
+  if ('IntersectionObserver' in window && statNums.length > 0) {
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCountUp(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    statNums.forEach(num => statsObserver.observe(num));
+  } else {
+    // Fallback
+    statNums.forEach(num => {
+      const target = num.getAttribute('data-target');
+      const suffix = num.getAttribute('data-suffix') || '';
+      num.innerHTML = parseInt(target).toLocaleString('en-IN') + `<span>${suffix}</span>`;
+    });
+  }
+
+  /* ==========================================================================
+     11. CONTACT FORM & NEWSLETTER MOCK SUBMISSIONS
+     ========================================================================== */
+  const contactForm = document.getElementById('contact-inquiry-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Basic validation
+      const name = document.getElementById('form-name').value.trim();
+      const email = document.getElementById('form-email').value.trim();
+      
+      if (!name || !email) {
+        alert('Please fill out all required fields.');
+        return;
+      }
+
+      // Generate a sleek Toast or alert modal
+      const modal = document.createElement('div');
+      modal.style.position = 'fixed';
+      modal.style.top = '50%';
+      modal.style.left = '50%';
+      modal.style.transform = 'translate(-50%, -50%)';
+      modal.style.backgroundColor = '#ffffff';
+      modal.style.padding = '40px';
+      modal.style.borderRadius = '20px';
+      modal.style.boxShadow = '0 20px 50px rgba(0, 0, 0, 0.3)';
+      modal.style.zIndex = '10001';
+      modal.style.textAlign = 'center';
+      modal.style.maxWidth = '450px';
+      modal.style.width = '90%';
+      modal.style.border = '1px solid #10b981';
+
+      modal.innerHTML = `
+        <div style="width: 60px; height: 60px; background-color: #d1fae5; color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px;">✓</div>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 24px; color: #0b132b; margin-bottom: 12px;">Inquiry Received</h3>
+        <p style="font-size: 15px; color: #475569; margin-bottom: 24px; line-height: 1.6;">Thank you for reaching out to Genex Logistics, <strong>${name}</strong>. Our custom solutions expert will review your requirements and respond within 2 business hours.</p>
+        <button id="close-modal-btn" class="btn btn-primary" style="width: 100%;">Return to Home</button>
+      `;
+
+      const overlay = document.createElement('div');
+      overlay.style.position = 'fixed';
+      overlay.style.top = '0';
+      overlay.style.left = '0';
+      overlay.style.width = '100%';
+      overlay.style.height = '100%';
+      overlay.style.backgroundColor = 'rgba(11, 19, 43, 0.6)';
+      overlay.style.backdropFilter = 'blur(4px)';
+      overlay.style.zIndex = '10000';
+
+      document.body.appendChild(overlay);
+      document.body.appendChild(modal);
+
+      document.getElementById('close-modal-btn').addEventListener('click', () => {
+        document.body.removeChild(modal);
+        document.body.removeChild(overlay);
+        contactForm.reset();
+      });
+    });
+  }
+
+  const newsletterForms = document.querySelectorAll('.newsletter-form');
+  newsletterForms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailInput = form.querySelector('input[type="email"]');
+      if (emailInput && emailInput.value.trim()) {
+        alert(`Thank you for subscribing! Insights will be sent to: ${emailInput.value.trim()}`);
+        emailInput.value = '';
+      }
+    });
+  });
+
+  /* ==========================================================================
+     12. DYNAMIC CHATBOT INTEGRATION
+     ========================================================================== */
+  // Chatbot logic is loaded inline directly inside quote-widget.html
+
+});
+
+
+  </script>
+
+</body>
+</html>
